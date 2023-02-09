@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""Defines an integer addition function"""
+
+
 def add_integer(a, b=98):
     """Adds 2 integers
     Arguments of type float are casted into int

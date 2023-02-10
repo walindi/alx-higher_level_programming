@@ -36,8 +36,6 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    if div == float('inf') or div == -float('inf'):
-        div = 0
 
     result = [[round(num / div, 2) for num in row] for row in matrix]
 

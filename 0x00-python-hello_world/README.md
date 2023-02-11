@@ -14,3 +14,14 @@
 - [8-concat_edges.py](8-concat_edges.py) prints `object-oriented programming with Python`, followed by a new line without creating new variables or string literals. It is a completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py).
 - [9-easter_egg.py](9-easter_egg.py) prints "The Zen of Python", by Tim Peters.
 - [100-write.py](100-write.py) prints `and that piece of art is useful - Dora Korpar, 2015-10-19`followed by a new line to `stderr` using the function `write` from the `sys` module. The script exits with the status code `1`.
+- [101-compile](101-compile) is a script that compiles a Python script file. The Python file name will be stored in the environment variable `$PYFILE`. The output filename has to be `$PYFILEc`
+- [102-magic_calculation.py](102-magic_calculation.py) is a python function that does exactly the same as the following bytecode:
+
+```
+  3           0 LOAD_CONST               1 (98)
+              3 LOAD_FAST                0 (a)
+              6 LOAD_FAST                1 (b)
+              9 BINARY_POWER
+             10 BINARY_ADD
+             11 RETURN_VALUE
+```

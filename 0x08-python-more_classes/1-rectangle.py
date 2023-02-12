@@ -11,8 +11,8 @@ class Rectangle:
             width (int, optional): width of new rectangle. Default is 0
             height (int, optional): height of new reactangle. Defaults to 0
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):

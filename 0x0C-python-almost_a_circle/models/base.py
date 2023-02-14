@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Doc"""
+"""Defines a Base model class"""
 
 
 class Base:

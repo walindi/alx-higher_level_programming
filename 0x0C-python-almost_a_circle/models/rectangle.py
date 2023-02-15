@@ -15,6 +15,12 @@ class Rectangle(Base):
             x (int): x coordinate of the new rectangle
             y (int): y coordinate of new rectangle
             id (int): Id of the new rectangle
+
+        Raises:
+            TypeError: if either width or height is not an integer
+            ValueError: if either width or height <= 0
+            TypeError: if either x or y is not an int
+            ValueError: if either x or y < 0
         """
         self.__width = width
         self.__height = height

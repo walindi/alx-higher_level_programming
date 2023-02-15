@@ -12,7 +12,7 @@ class Rectangle(Base):
         Args:
             width (int): width of the rectangle
             height (int): height of the rectangle
-            x (int): x coordinate of new rectangle
+            x (int): x coordinate of the new rectangle
             y (int): y coordinate of new rectangle
             id (int): Id of the new rectangle
         """

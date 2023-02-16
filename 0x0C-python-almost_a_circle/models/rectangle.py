@@ -97,6 +97,12 @@ class Rectangle(Base):
         """Public method
         Prints in stdout the rectangle instance with the character `#`
         """
+
         if self.__width == 0 or self.__height == 0:
             print("")
             return
+
+        for i in range(self.height):
+            for j in range(self.width):
+                print("#", end="")
+            print("")

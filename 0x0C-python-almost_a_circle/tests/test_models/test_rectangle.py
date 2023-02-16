@@ -410,6 +410,23 @@ class TestRectangle_stdout(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.display(1)
 
+    def test_display_width_height_x(self):
+        r = Rectangle(3, 2, 1, 0, 1)
+        capture = TestRectangle_stdout.capture_stdout(r, "display")
+        self.assertEqual(" ###\n ###\n", capture.getvalue())
+
+    def test_display_width_height_y(self):
+        r = Rectangle(4, 5, 0, 1, 0)
+        capture = TestRectangle_stdout.capture_stdout(r, "display")
+        display = "\n####\n####\n####\n####\n####\n"
+        self.assertEqual(display, capture.getvalue())
+
+    def test_display_width_height_x_y(self):
+        r = Rectangle(2, 4, 3, 2, 0)
+        capture = TestRectangle_stdout.capture_stdout(r, "display")
+        display = "\n\n   ##\n   ##\n   ##\n   ##\n"
+        self.assertEqual(display, capture.getvalue())
+
     # Test __str__ method
     def test_str_method_print_width_height(self):
         r = Rectangle(4, 6)

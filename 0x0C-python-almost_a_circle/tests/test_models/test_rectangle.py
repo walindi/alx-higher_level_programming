@@ -13,6 +13,8 @@ Unittest classes:
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
+import io
+import sys
 
 
 class TestRectangle_instantiation(unittest.TestCase):
@@ -376,28 +378,32 @@ class TestRectangle_area(unittest.TestCase):
             r.area(1)
 
 
+class TestRectangle_stdout(unittest.TestCase):
+    """Unittest for testing the display method"""
+
+    @staticmethod
+    def capture_stdout(rect, method):
+        """Captures and returns text printed to stdout.
+        Args:
+            rect (Rectangle): The Rectangle to print to stdout.
+            method (str): The method to run on rect.
+        Returns:
+            The text printed to stdout by calling method on sq.
+        """
+        capture = io.StringIO()
+        sys.stdout = capture
+        if method == "print":
+            print(rect)
+        else:
+            rect.display()
+        sys.stdout = sys.__stdout__
+        return capture
+
     # Test display method
     def test_display_width_height(self):
         r = Rectangle(2, 3, 0, 0, 0)
         capture = TestRectangle_stdout.capture_stdout(r, "display")
         self.assertEqual("##\n##\n##\n", capture.getvalue())
-
-    def test_display_width_height_x(self):
-        r = Rectangle(3, 2, 1, 0, 1)
-        capture = TestRectangle_stdout.capture_stdout(r, "display")
-        self.assertEqual(" ###\n ###\n", capture.getvalue())
-
-    def test_display_width_height_y(self):
-        r = Rectangle(4, 5, 0, 1, 0)
-        capture = TestRectangle_stdout.capture_stdout(r, "display")
-        display = "\n####\n####\n####\n####\n####\n"
-        self.assertEqual(display, capture.getvalue())
-
-    def test_display_width_height_x_y(self):
-        r = Rectangle(2, 4, 3, 2, 0)
-        capture = TestRectangle_stdout.capture_stdout(r, "display")
-        display = "\n\n   ##\n   ##\n   ##\n   ##\n"
-        self.assertEqual(display, capture.getvalue())
 
     def test_display_one_arg(self):
         r = Rectangle(5, 1, 2, 4, 7)

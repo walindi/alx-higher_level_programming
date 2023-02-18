@@ -22,5 +22,5 @@ if __name__ == "__main__":
     elif argv[2] == "/":
         print(f"{a} / {b} = {div(a, b)}")
     else:
-        print("Unknown operator. Available operators: +, -, * and / ")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)

@@ -68,5 +68,6 @@
             107 LOAD_CONST               0 (None)
             110 RETURN_VALUE
 ```
+
     - Useful tip: [Python bytecode](https://docs.python.org/3.4/library/dis.html)
 - [103-fast_alphabet.py](103-fast_alphabet.py) prints the alphabet in uppercase.

@@ -9,7 +9,7 @@ def multiple_returns(sentence):
     tup = ()
 
     if len(sentence) == 0:
-        tup = (0, 'None')
+        tup = 0, None
 
     tup = len(sentence), sentence[0]
 

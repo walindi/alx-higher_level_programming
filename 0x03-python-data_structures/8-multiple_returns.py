@@ -6,11 +6,9 @@ def multiple_returns(sentence):
     Args:
         sentence: the string to be checked
     """
-    tup = ()
 
     if not sentence:
-        tup = 0, None
+        return = 0, None
 
-    tup = len(sentence), sentence[0]
-
-    return tup
+    else:
+        return len(sentence), sentence[0]

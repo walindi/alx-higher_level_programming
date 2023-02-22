@@ -8,7 +8,7 @@ def multiple_returns(sentence):
     """
     tup = ()
 
-    if len(sentence) == 0:
+    if not sentence:
         tup = 0, None
 
     tup = len(sentence), sentence[0]

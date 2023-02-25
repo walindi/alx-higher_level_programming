@@ -8,4 +8,4 @@ def best_score(a_dictionary):
         # sortedDict is a list of a_dictionary k/v pairs in ascending order
         # k/v pairs in the list are tuples
 
-        return sortedDict[-1][1]
+        return sortedDict[-1][0]

@@ -17,12 +17,11 @@ def roman_to_int(roman_string):
     if not str or type(roman_string) != str:
         return 0
 
-    else:
-        for i in range(len(roman_string)):
-            if i + 1 > len(roman_string):  # if there's a next character
-                if dic[roman_string[i]] < dic[roman_string[i + 1]]:
-                    intValue -= dic[roman_string[i]]
-            else:
-                intValue += dic[roman_string[i]]
+    for i in range(len(roman_string)):
+        if (i + 1 < len(roman_string)
+                and dic[roman_string[i]] < dic[roman_string[i + 1]]):
+            intValue -= dic[roman_string[i]]
+        else:
+            intValue += dic[roman_string[i]]
 
-        return intValue
+    return intValue

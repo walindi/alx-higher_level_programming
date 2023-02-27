@@ -27,3 +27,14 @@ walindi:~/0x04$ ./100-main.py
 Average: 2.80
 walindi:~/0x04$
 ```
+- [103-python.c](103-python.c) contains two C functions that print some basic info about Python lists and Python bytes objects.
+
+Python lists:
+  - Prototype: `void print_python_list(PyObject *p);`
+Python bytes:
+  - Prototype: `void print_python_bytes(PyObject *p);`
+  - Lin “first X bytes”: print a maximum of 10 bytes
+  - If `p` is not a valid `PyBytesObject`, print an error message
+About:
+  - Python version: 3.4
+  - Shared library compiled with: `gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,libPython.so -o libPython.so -fPIC -I/usr/include/python3.4 103-python.c`

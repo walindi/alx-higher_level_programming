@@ -31,6 +31,7 @@ walindi:~/0x04$
 
 Python lists:
   - Prototype: `void print_python_list(PyObject *p);`
+
 Python bytes:
   - Prototype: `void print_python_bytes(PyObject *p);`
   - Lin “first X bytes”: print a maximum of 10 bytes
